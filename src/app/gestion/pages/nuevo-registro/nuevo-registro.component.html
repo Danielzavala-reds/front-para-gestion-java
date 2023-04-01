@@ -1,0 +1,87 @@
+<div id="container">
+    
+    <div class="animate__animated animate__fadeInDown titulo">
+        <span class="title"> {{ (usuarioId) ? 'Actualizar cliente' : 'Nuevo Cliente' }} </span>
+    </div>
+
+    <div class="animate__animated animate__fadeIn content">
+        <form id="form"
+        (ngSubmit)="guardar()" 
+        [formGroup]="miFormulario"
+        autocomplete="off">
+            
+            <div class="box">
+                <label> Nombre: </label>
+                <input type="text" 
+                formControlName="nombre"
+                placeholder="Nombre">
+
+            </div>
+            <span *ngIf="camposValidos('nombre')" class="error"> El nombre tiene que ser obligatorio </span>
+            
+            <div class="box">
+                <label> Apellido: </label>
+                <input type="text" 
+                formControlName="apellido"
+                placeholder="Apellido">
+                
+            </div>
+            <span *ngIf="camposValidos('apellido')" class="error"> El apellido tiene que ser obligatorio </span>
+            
+            <div class="box">
+                <label for=""> Número celular: </label>
+                <input type="number"
+                formControlName="telefono"
+                placeholder="Número del cliente">
+
+            </div>
+
+            <span *ngIf="camposValidos('telefono')" class="error"> Tiene que ser un número válido (minimo diez numeros)</span>
+            
+            <div class="box">
+                <label for=""> Correo electrónico: </label>
+                <input type="text"
+                formControlName="email"
+                placeholder="Correo electrónico">
+                
+            </div>
+            <span *ngIf="camposValidos('email')" class="error"> Tiene que ser un correo valido</span>
+            
+    
+            <button class="btnSubmit" 
+            type="submit"
+            >
+            {{ (usuarioId) ? 'Actualizar' : 'Guardar' }} </button>
+            
+            <button class="btnSubmit"
+             *ngIf="usuarioId" 
+             (click)="borrar()"> 
+             Borrar registro </button>  
+            
+           
+           </form>
+
+
+           
+           <h2> Estado de formulario: </h2>
+           <span> Valid </span>
+           <pre> {{miFormulario.valid}} </pre>
+           <hr>
+           <span> Value </span>
+           <pre> {{miFormulario.value | json}} </pre>
+           <hr>
+           <span> Touched </span>
+           <pre> {{miFormulario.touched}} </pre>
+
+        
+
+    </div>
+
+
+        
+</div>
+
+
+   
+
+

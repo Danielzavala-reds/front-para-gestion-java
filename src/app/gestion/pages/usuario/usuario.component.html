@@ -1,0 +1,39 @@
+<div class="container">
+
+    <h2 class="animate__animated animate__fadeInDown" > Usuarios registrados </h2>
+
+    <div class="flex-input animate__animated animate__fadeIn search">
+        <!-- <app-search-input></app-search-input> -->
+    
+    </div>
+
+    <table id="table" class="animate__animated animate__fadeIn animate__fast">
+        <tr>
+            <th> Id </th>
+            <th> Nombre del usuario </th>
+            <th> Email  </th>
+            <th> Teléfono </th>
+            <th> Acciones </th>
+        </tr>
+        
+        
+            <tr> 
+               <td> {{usuario.id}} </td>
+               <td> {{usuario.nombre}}   </td>
+               <td> {{usuario.apellido}} </td>
+               <td> {{ (usuario.email) ? usuario.email : 'N/A' }} </td>
+               <td> {{ (usuario.telefono) ? usuario.telefono : 'N/A' }} </td>
+               <td> <button  > Eliminar </button>  </td>
+            </tr>
+
+        
+    </table>
+
+    <!-- <div class="flex-reg">
+        
+        <span class="register-none animate__animated animate__fadeIn animate__delay-1s">
+             {{hayRegistros}} </span>
+
+    </div> -->
+
+</div>

@@ -3,6 +3,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "BasesSpringApplication",
+      "request": "launch",
+      "mainClass": "com.spring.bases.basesspring.BasesSpringApplication",
+      "projectName": "bases-spring"
+    },
+    {
       "name": "ng serve",
       "type": "pwa-chrome",
       "request": "launch",
