@@ -1,0 +1,79 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 99%;
+    height: 99vh;
+    margin: 0 auto;
+
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 600px;
+        width: 40%;
+        border-radius: 20px;
+        transition: all 300ms;
+
+        h1{
+            margin-top: 50px;
+            text-align: center;
+            align-self: center;
+            font-size: 40px;
+            
+        }
+
+        form{
+            margin: auto;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            flex-direction: column;
+            font-size: 20px;
+            width: 580px;
+            height: 400px;
+            
+
+
+            .box{
+                display: flex;
+                flex-basis: 30px;
+                width: 100%;
+                margin: 15px;
+
+                label{
+                    align-self: center;
+                    text-align: left;
+                    flex: 1.5;
+                    
+                }
+
+                input{
+                    flex: 2;
+                    align-self: center;
+                    padding: 10px;
+                    transition: 300ms all;
+                    border-style: none;
+                    border-radius: 10px;    
+                }
+
+                input:focus{
+                    box-shadow: inset 3px 3px 16px 1px rgba(130, 128, 128, 0.64);
+                    outline-style: none;
+                }
+            }
+
+            ul{
+                margin-top: 50px;
+                list-style: none;
+            }
+        }
+    }
+
+    section:hover{
+        box-shadow: 10px 10px 90px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 10px 10px 90px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 90px 0px rgba(0,0,0,0.75);
+    }
+}

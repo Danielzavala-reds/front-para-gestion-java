@@ -19,8 +19,6 @@ export class UsuariosComponent {
   usuarios: Usuario[] = [];
 
   usuario!: Usuario;
-
-  usuarioId!: number;
   
   constructor(private gestionService: GestionService,
               private activatedRoute: ActivatedRoute,

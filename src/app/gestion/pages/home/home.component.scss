@@ -2,13 +2,11 @@ $icons-shadow: 18px 10px 35px 0px rgba(0,0,0,0.75);
 
 
 .container{
-
-    
-
     #header{
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: space-around;
         width: 100%;
         height: 80px;
         border-bottom: 3px solid #969696;
@@ -16,29 +14,20 @@ $icons-shadow: 18px 10px 35px 0px rgba(0,0,0,0.75);
 
         h2{
             cursor: pointer;
-            margin-left: -30px;
         }
     
-        .content{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            width: 100%;
             
-           
-           
-    
-            i{
-                cursor: pointer;
-                font-size: 20px
-            }
-    
+        i{
+           font-size: 20px;
+        }
+
+        button{
+            justify-self: right;
         }
     }
 
     .main{
         display: flex;
-        
     }
     
     .center{

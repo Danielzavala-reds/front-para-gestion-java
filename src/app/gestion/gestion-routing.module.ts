@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { HomeComponent } from './pages/home/home.component';
-import { UsuarioComponent } from './pages/usuario/usuario.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { NuevoRegistroComponent } from './pages/nuevo-registro/nuevo-registro.component';
+import { PerfilComponent } from './pages/perfil/perfil.component';
 
 const routes: Routes = [
     {
@@ -15,6 +15,7 @@ const routes: Routes = [
         {path: 'usuarios', component: UsuariosComponent},
         {path: 'nuevo-registro', component: NuevoRegistroComponent},
         {path: 'editar/:id', component: NuevoRegistroComponent},
+        {path: 'perfil', component: PerfilComponent},
         {path: '**', redirectTo: 'usuarios'}
       ]
     } 
