@@ -23,6 +23,7 @@
                <td> {{ (usuario.email) ? usuario.email : 'N/A' }} </td>
                <td> {{ (usuario.telefono) ? usuario.telefono : 'N/A' }} </td>
                <td> <button  [routerLink]="['/inicio/editar', usuario.id]" > Editar </button>  </td>
+               <td> <button (click)="borrar(usuario.id!)" > Eliminar </button>  </td>
             </tr>
 
         

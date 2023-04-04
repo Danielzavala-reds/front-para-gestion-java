@@ -29,7 +29,7 @@
             <span *ngIf="camposValidos('apellido')" class="error"> El apellido tiene que ser obligatorio </span>
             
             <div class="box">
-                <label for=""> Número celular: </label>
+                <label for=""> Número de celular: </label>
                 <input type="number"
                 formControlName="telefono"
                 placeholder="Número del cliente">
@@ -53,13 +53,7 @@
             >
             {{ (usuarioId) ? 'Actualizar' : 'Guardar' }} </button>
             
-            <button class="btnSubmit"
-             *ngIf="usuarioId" 
-             (click)="borrar()"> 
-             Borrar registro </button>  
-            
-           
-           </form>
+            </form>
 
 
            

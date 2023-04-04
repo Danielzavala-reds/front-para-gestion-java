@@ -11,11 +11,11 @@ const routes: Routes = [
       path: '',
       component: HomeComponent,
       children: [
-        
+        {path: 'principal', component: InicioComponent},
         {path: 'usuarios', component: UsuariosComponent},
         {path: 'nuevo-registro', component: NuevoRegistroComponent},
         {path: 'editar/:id', component: NuevoRegistroComponent},
-        {path: '**', redirectTo: ''}
+        {path: '**', redirectTo: 'usuarios'}
       ]
     } 
 ];

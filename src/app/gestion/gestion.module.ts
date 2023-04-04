@@ -8,6 +8,9 @@ import { UsuarioComponent } from './pages/usuario/usuario.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { NuevoRegistroComponent } from './pages/nuevo-registro/nuevo-registro.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from '../material/material.module';
+import { ConfirmarComponent } from './components/confirmar/confirmar.component';
+
 
 
 @NgModule({
@@ -16,12 +19,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     UsuarioComponent,
     InicioComponent,
-    NuevoRegistroComponent
+    NuevoRegistroComponent,
+    ConfirmarComponent
   ],
   imports: [
     CommonModule,
     GestionRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MaterialModule
   ]
 })
 export class GestionModule { }
