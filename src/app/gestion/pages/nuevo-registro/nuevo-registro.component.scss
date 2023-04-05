@@ -1,17 +1,17 @@
 #container{
     width: 98%;
-    // border: 3px solid red;
+   
     margin: 0px auto;
 
     .titulo{
         font-size: 40px;
-        // background: blue;
+        
         text-align: center;
         margin-top: 50px;
     }
 
     .content{
-        // border: 3px solid pink;
+        
         height: 680px;
         #form{
             width: 50%;
@@ -20,17 +20,15 @@
             margin-top: 50px;
             display: flex;
             flex-direction: column;
-            // align-items: center;
+           
             font-size: 30px;
-            // border: 4px solid black;
+           
             transition: 300ms all;
             border-radius: 20px;
 
             .box{
                 display: flex;
-                // border: 3px solid purple;
-                // text-align: left;
-                // justify-content: space-around;
+                
                 flex-basis: 30px;
                 margin: 20px;
 
@@ -45,7 +43,7 @@
                     flex: 1.5;
                     padding: 10px;
                     transition: 300ms all;
-                    border: 1px solid black !important;
+                    border: 1px solid black ;
                     border-radius: 10px;    
                     border-style: none;
                 }

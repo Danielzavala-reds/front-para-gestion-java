@@ -2,7 +2,7 @@ $text-shadow: 2px 2px 5px rgba(0,0,0,0.69);
 
 
 #container{
-    // background: red;
+   
     width: 100%;
     
     
@@ -12,12 +12,12 @@ $text-shadow: 2px 2px 5px rgba(0,0,0,0.69);
         justify-content: space-around;
         align-items: center;
         margin-top: 40px;
-        // padding-left: 100px;
+        
         width: 100%;
         
 
         .fraction{
-            // background: red;
+           
             font-size: 30px;
             padding-top: 100px;
             transition: 300ms all;
@@ -32,10 +32,9 @@ $text-shadow: 2px 2px 5px rgba(0,0,0,0.69);
         }
 
         .image{
-            // margin-left: 50px;
-            // margin-top: 100px;
+           
          img{
-                // padding-top: 50px;
+                
                 width: 100%;
             }
             
@@ -48,7 +47,7 @@ $text-shadow: 2px 2px 5px rgba(0,0,0,0.69);
 .contacto{
  display: grid;
  justify-content: center;  
-//  background: red;
+
  width: 100%;
  
     h2{
