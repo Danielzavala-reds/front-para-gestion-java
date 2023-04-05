@@ -48,9 +48,9 @@
             <span *ngIf="camposValidos('email')" class="error"> Tiene que ser un correo valido</span>
             
     
-            <button class="btnSubmit" 
-            type="submit"
-            >
+            <button class="btnSubmit"
+            mat-button 
+            type="submit">
             {{ (registroId) ? 'Actualizar' : 'Guardar' }} </button>
             
             </form>

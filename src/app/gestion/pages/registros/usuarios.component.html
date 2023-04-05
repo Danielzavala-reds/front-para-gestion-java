@@ -10,10 +10,11 @@
     <table id="table" class="animate__animated animate__fadeIn animate__fast">
         <tr>
             <th> Id </th>
-            <th> Nombre del usuario </th>
+            <th> Registro a nombre de </th>
             <th> Email  </th>
             <th> Teléfono </th>
             <th> Acciones </th>
+            
         </tr>
         
         
@@ -22,8 +23,7 @@
                <td> {{registro.nombre}} {{registro.apellido}} </td>
                <td> {{ (registro.email) ? registro.email : 'N/A' }} </td>
                <td> {{ (registro.telefono) ? registro.telefono : 'N/A' }} </td>
-               <td> <button  [routerLink]="['/inicio/editar', registro.id]" > Editar </button>  </td>
-               <td> <button (click)="borrar(registro.id!)" > Eliminar </button>  </td>
+               <td> <button mat-button [routerLink]="['/inicio/editar', registro.id]"> Editar </button>  <button mat-button (click)="borrar(registro.id!)" > Eliminar </button> </td>
             </tr>
 
         

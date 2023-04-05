@@ -77,7 +77,7 @@ export class NuevoRegistroComponent implements OnInit {
             title: 'Actualizado',
             text: 'Registro actualizado con exito',
           })
-          this.router.navigate(['/inicio/usuarios'])
+          this.router.navigate(['/inicio/registros'])
           console.log('Usuario actualizado: ', res)
         } )
     } else{
