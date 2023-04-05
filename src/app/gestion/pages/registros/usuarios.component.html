@@ -17,13 +17,13 @@
         </tr>
         
         
-            <tr *ngFor="let usuario of usuarios"> 
-               <td> {{usuario.id}} </td>
-               <td> {{usuario.nombre}} {{usuario.apellido}} </td>
-               <td> {{ (usuario.email) ? usuario.email : 'N/A' }} </td>
-               <td> {{ (usuario.telefono) ? usuario.telefono : 'N/A' }} </td>
-               <td> <button  [routerLink]="['/inicio/editar', usuario.id]" > Editar </button>  </td>
-               <td> <button (click)="borrar(usuario.id!)" > Eliminar </button>  </td>
+            <tr *ngFor="let registro of registros"> 
+               <td> {{registro.id}} </td>
+               <td> {{registro.nombre}} {{registro.apellido}} </td>
+               <td> {{ (registro.email) ? registro.email : 'N/A' }} </td>
+               <td> {{ (registro.telefono) ? registro.telefono : 'N/A' }} </td>
+               <td> <button  [routerLink]="['/inicio/editar', registro.id]" > Editar </button>  </td>
+               <td> <button (click)="borrar(registro.id!)" > Eliminar </button>  </td>
             </tr>
 
         

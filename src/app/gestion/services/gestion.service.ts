@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
-import { Usuario } from '../interfaces/usuario';
+import { Registro } from '../interfaces/usuario';
 
 @Injectable({
   providedIn: 'root'
@@ -13,14 +13,14 @@ export class GestionService {
 
   constructor(private http: HttpClient) { }
 
-  addUsuario( usuario: Usuario ):Observable<Usuario> {return this.http.post<Usuario> (`${this.baseUrl}/nuevo-usuario`, usuario) }
+  addRegistro( registro: Registro ):Observable<Registro> {return this.http.post<Registro> (`${this.baseUrl}/nuevo-usuario`, registro) }
   
-  deleteUsuario(id: number):Observable<any> {return this.http.delete<any> (`${this.baseUrl}/usuarios/${id}`) }
+  deleteRegistro(id: number):Observable<any> {return this.http.delete<any> (`${this.baseUrl}/usuarios/${id}`) }
   
-  getUsuarios():Observable<Usuario[]> { return this.http.get<Usuario[]>(`${this.baseUrl}/usuarios`) };
+  getRegistros():Observable<Registro[]> { return this.http.get<Registro[]>(`${this.baseUrl}/usuarios`) };
  
-  getUsuario( id: number ):Observable<Usuario> { return this.http.get<Usuario>(`${this.baseUrl}/usuarios/${id}`) }; 
+  getRegistro( id: number ):Observable<Registro> { return this.http.get<Registro>(`${this.baseUrl}/usuarios/${id}`) }; 
 
-  updateUsuario(usuario: Usuario ,id: number): Observable<Usuario> { return this.http.put<Usuario> (`${this.baseUrl}/editar-usuario/${id}`, usuario) }
+  updateRegistro(registro: Registro ,id: number): Observable<Registro> { return this.http.put<Registro> (`${this.baseUrl}/editar-usuario/${id}`, registro) }
 
 }

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { GestionRoutingModule } from './gestion-routing.module';
-import { UsuariosComponent } from './pages/usuarios/usuarios.component';
+import { UsuariosComponent } from './pages/registros/usuarios.component';
 import { HomeComponent } from './pages/home/home.component';
 
 import { InicioComponent } from './pages/inicio/inicio.component';

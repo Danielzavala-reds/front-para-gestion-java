@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { Usuario } from '../../interfaces/usuario';
+import { Registro } from '../../interfaces/usuario';
 
 @Component({
   selector: 'app-confirmar',
@@ -9,10 +9,10 @@ import { Usuario } from '../../interfaces/usuario';
 })
 export class ConfirmarComponent implements OnInit {
 
-  registro!: Usuario;
+  registro!: Registro;
 
   constructor(private dialogRef: MatDialogRef<ConfirmarComponent>,
-             @Inject(MAT_DIALOG_DATA) public data: Usuario){}
+             @Inject(MAT_DIALOG_DATA) public data: Registro){}
   
   ngOnInit(): void {
     

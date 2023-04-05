@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { GestionService } from '../../services/gestion.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Usuario } from '../../interfaces/usuario';
+import { Registro } from '../../interfaces/usuario';
 import { ActivatedRoute, Router } from '@angular/router';
 import { switchMap } from 'rxjs';
 
@@ -18,8 +18,8 @@ import { ConfirmarComponent } from '../../components/confirmar/confirmar.compone
 })
 export class NuevoRegistroComponent implements OnInit {
 
-  registro!: Usuario;
-  usuarioId!: number;
+  registro!: Registro;
+  registroId!: number;
 
 
   // Form reactive
@@ -45,12 +45,12 @@ export class NuevoRegistroComponent implements OnInit {
 
     this.activatedRoute.params
     .pipe(
-      switchMap( ({id}) => this.gestionService.getUsuario (id) ) 
+      switchMap( ({id}) => this.gestionService.getRegistro (id) ) 
     )
-    .subscribe( usuario => {
-      this.usuarioId = usuario.id!;
-      this.miFormulario.patchValue(usuario);
-      console.log('Editando cliente', usuario)  
+    .subscribe( registro => {
+      this.registroId = registro.id!;
+      this.miFormulario.patchValue(registro);
+      console.log('Editando cliente', registro)  
     })
    
 
@@ -69,8 +69,8 @@ export class NuevoRegistroComponent implements OnInit {
       return;
     };
 
-    if(this.usuarioId){
-      this.gestionService.updateUsuario(this.miFormulario.value, this.usuarioId)
+    if(this.registroId){
+      this.gestionService.updateRegistro(this.miFormulario.value, this.registroId)
         .subscribe( res => {
           Swal.fire({
             icon: 'success',
@@ -81,7 +81,7 @@ export class NuevoRegistroComponent implements OnInit {
           console.log('Usuario actualizado: ', res)
         } )
     } else{
-      this.gestionService.addUsuario(this.miFormulario.value)
+      this.gestionService.addRegistro(this.miFormulario.value)
         .subscribe ( res => {
           Swal.fire({
             icon: 'success',

@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 import { GestionService } from '../../services/gestion.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Usuario } from '../../interfaces/usuario';
-import { switchMap } from 'rxjs';
+import { Registro } from '../../interfaces/usuario';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmarComponent } from '../../components/confirmar/confirmar.component';
 import Swal from 'sweetalert2';
@@ -16,9 +15,9 @@ import Swal from 'sweetalert2';
 })
 export class UsuariosComponent {
 
-  usuarios: Usuario[] = [];
+  registros: Registro[] = [];
 
-  usuario!: Usuario;
+  registro!: Registro;
   
   constructor(private gestionService: GestionService,
               private activatedRoute: ActivatedRoute,
@@ -29,7 +28,7 @@ export class UsuariosComponent {
   };
 
   get hayRegistros():string {
-      if(this.usuarios.length === 0){
+      if(this.registros.length === 0){
        return `No hay registros`
       }
 
@@ -40,13 +39,13 @@ export class UsuariosComponent {
    const dialog = this.dialog.open(ConfirmarComponent, {
       width: '300px',
       height: '200px',
-      data: this.usuario
+      data: this.registro
     });
 
     dialog.afterClosed()
       .subscribe ( (res) => {
         if(res){
-           this.gestionService.deleteUsuario(id)
+           this.gestionService.deleteRegistro(id)
             .subscribe( registro => {
               Swal.fire({
                 icon: 'error',
@@ -60,9 +59,9 @@ export class UsuariosComponent {
     }
 
  private obtenerRegistros(){
-  this.gestionService.getUsuarios()
+  this.gestionService.getRegistros()
   .subscribe (registros => {
-    this.usuarios = registros;
+    this.registros = registros;
   })
  }
 
