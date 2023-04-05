@@ -9,7 +9,7 @@ import { Registro } from '../interfaces/usuario';
 })
 export class GestionService {
 
-  private baseUrl = 'http://localhost:8090/api'
+  private baseUrl = 'https://back-java-springboot-mysql-production.up.railway.app/api'
 
   constructor(private http: HttpClient) { }
 
