@@ -16,7 +16,7 @@ const routes: Routes = [
         {path: 'nuevo-registro', component: NuevoRegistroComponent},
         {path: 'editar/:id', component: NuevoRegistroComponent},
         {path: 'perfil', component: PerfilComponent},
-        {path: '**', redirectTo: 'usuarios'}
+        {path: '**', redirectTo: 'principal'}
       ]
     } 
 ];
